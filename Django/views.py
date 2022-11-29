@@ -4,13 +4,16 @@
 
 from django.http import HttpResponse
 
-HTML_STRING = """
-    <hi>Hello World</h1>
-"""
 
 def home_view(request):
     """
         Take in a request (Django sends request)
         Return HTML as a response (We pick to return the response)
     """
+    name = "Rizal Fadia Al Fikri"
+
+    HTML_STRING = f"""
+        <h1>Hello {name}</h1>
+    """
+
     return HttpResponse(HTML_STRING)
