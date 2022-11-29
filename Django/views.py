@@ -2,13 +2,13 @@
     To render html web pages
 """
 
-from django import HttpResponse
+from django.http import HttpResponse
 
 HTML_STRING = """
     <hi>Hello World</h1>
 """
 
-def home(request):
+def home_view(request):
     """
         Take in a request (Django sends request)
         Return HTML as a response (We pick to return the response)
