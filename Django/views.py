@@ -6,11 +6,15 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string, get_template
 from django.shortcuts import render
 
-def home_view(request):
+def article_home_view(request):
+    return HttpResponse(request)
+
+def home_view(request, id, *args, **kwargs):
     """
         Take in a request (Django sends request)
         Return HTML as a response (We pick to return the response)
     """
+    print(id)
     name = "Rizal Fadia Al Fikri"
     my_list = [1,2,3,4,5,6]
     
